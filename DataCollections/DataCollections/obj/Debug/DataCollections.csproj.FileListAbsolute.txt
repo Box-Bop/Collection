@@ -1,0 +1,7 @@
+C:\Users\opilane\Desktop\Blank\DataCollections\DataCollections\bin\Debug\DataCollections.exe.config
+C:\Users\opilane\Desktop\Blank\DataCollections\DataCollections\bin\Debug\DataCollections.exe
+C:\Users\opilane\Desktop\Blank\DataCollections\DataCollections\bin\Debug\DataCollections.pdb
+C:\Users\opilane\Desktop\Blank\DataCollections\DataCollections\obj\Debug\DataCollections.csprojResolveAssemblyReference.cache
+C:\Users\opilane\Desktop\Blank\DataCollections\DataCollections\obj\Debug\DataCollections.csproj.CoreCompileInputs.cache
+C:\Users\opilane\Desktop\Blank\DataCollections\DataCollections\obj\Debug\DataCollections.exe
+C:\Users\opilane\Desktop\Blank\DataCollections\DataCollections\obj\Debug\DataCollections.pdb
