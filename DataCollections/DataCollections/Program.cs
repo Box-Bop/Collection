@@ -262,25 +262,46 @@ namespace DataCollections
 
             #region Stack - last in first out
 
-            Console.WriteLine("");
-            Stack<string> numbers = new Stack<string>();
-            numbers.Push("one");
-            numbers.Push("two");
-            numbers.Push("three");
-            numbers.Push("four");
-            numbers.Push("five");
+            //Console.WriteLine("");
+            //Stack<string> numbers = new Stack<string>();
+            //numbers.Push("one");
+            //numbers.Push("two");
+            //numbers.Push("three");
+            //numbers.Push("four");
+            //numbers.Push("five");
 
-            foreach (string number in numbers)
-            {
-                Console.WriteLine(number);
-            }
+            //foreach (string number in numbers)
+            //{
+            //    Console.WriteLine(number);
+            //}
 
-            Console.WriteLine("\nPopping '{0}'",numbers.Pop());
-            Console.WriteLine("Peeking at next in line: {0}", numbers.Peek());
-            Console.WriteLine("Popping '{0}'",numbers.Pop());
+            //Console.WriteLine("\nPopping '{0}'",numbers.Pop());
+            //Console.WriteLine("Peeking at next in line: {0}", numbers.Peek());
+            //Console.WriteLine("Popping '{0}'",numbers.Pop());
 
 
             #endregion Stack - last in first out
+
+            #region LINQ
+
+            //Data
+            int[] numbers = new int[7] { 0, 1, 2, 3, 4, 5, 6 };
+
+            //Loome päringu
+            var evenNumQuery = (from num in numbers
+                           where (num % 2) == 0
+                           select num).ToList();
+
+            //foreach (int num in numQuery)
+            //{
+            //    Console.WriteLine("{0,1 }", num);
+            //}
+
+            int evenNumCount = evenNumQuery.Count();
+
+            #endregion LINQ
+
+
             Console.ReadLine();
 
         }
