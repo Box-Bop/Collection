@@ -305,7 +305,7 @@ namespace DataCollections
                 new Human(){Name = "Kalle", Age = 40 },
                 new Human(){Name = "Malle", Age = 25 },
                 new Human(){Name = "Mari", Age = 30 },
-                new Human(){Name = "Elmar", Age = 10 },
+                new Human(){Name = "Elmar", Age = 40 },
                 new Human(){Name = "Juku", Age = 80 },
             };
 
@@ -334,30 +334,97 @@ namespace DataCollections
             //Console.WriteLine(a);
             //Console.WriteLine(b);
 
-            var a = numbers.ElementAtOrDefault(7);
-            var b = numbers.FirstOrDefault();
-            var c = numbers.Take(3).ToList();
-            var d = numbers.Average();
-            var e = numbers.Max();
-            var f = numbers.Min();
+            //var a = numbers.ElementAtOrDefault(7);
+            //var b = numbers.FirstOrDefault();
+            //var c = numbers.Take(3).ToList();
+            //var d = numbers.Average();
+            //var e = numbers.Max();
+            //var f = numbers.Min();
 
-            Console.WriteLine(a);
-            Console.WriteLine(b);
+            //Console.WriteLine(a);
+            //Console.WriteLine(b);
 
-            Console.WriteLine("***");
+            //Console.WriteLine("***");
 
-            foreach (var item in c)
-            {
-                Console.WriteLine(item);
-            }
-            Console.WriteLine(d);
-            Console.WriteLine(e);
+            //foreach (var item in c)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //Console.WriteLine(d);
+            //Console.WriteLine(e);
 
 
-            var g = humans1.Where(x => x.Name == "Kalle");
+            //var g = humans1.Where(x => x.Name == "Kalle").FirstOrDefault().Name;
+            //var h = humans1.Where(x => x.Age == 40).ToList();
+            //var i = humans1.Where(x => x.Name.Contains("a")).ToList();
+            //var j = humans1.Where(x => x.Name.StartsWith("M")).ToList();
+
+            //Console.WriteLine(g);
+
+            //foreach (var item in h)
+            //{
+            //    Console.WriteLine(item.Name + " " + item.Age);
+            //}
+            //Console.WriteLine("Contains a:");
+            //foreach (var item in i)
+            //{
+            //    Console.WriteLine(item.Name + " " + item.Age);
+            //}
+            //Console.WriteLine("Starts with M: ");
+            //foreach (var item in j)
+            //{
+            //    Console.WriteLine(item.Name + " " + item.Age);
+            //}
 
             #endregion LINQ
 
+            #region Ülesanne
+
+            var car = new List<Car>
+            {
+                new Car{KW = 300, Producer = "BMW", Model = "Sedan", Color = "Black" },
+                new Car{KW = 500, Producer = "Toyota", Model = "Aygo", Color = "White" },
+                new Car{KW = 420, Producer = "BMW", Model = "Z4 Roadster", Color = "Black" },
+                new Car{KW = 300, Producer = "BMW", Model = "Sedan", Color = "Green" },
+                new Car{KW = 550, Producer = "Toyota", Model = "Prius c", Color = "White" },
+                new Car{KW = 300, Producer = "Volvo", Model = "BMW i3", Color = "Pink" },
+                new Car{KW = 320, Producer = "BMW", Model = "Coupe", Color = "Black" },
+                new Car{KW = 500, Producer = "Toyota", Model = "Etios Cross", Color = "White" },
+                new Car{KW = 700, Producer = "Fiat", Model = "Fiat Panda", Color = "Black" },
+                new Car{KW = 410, Producer = "BMW", Model = "X6", Color = "Blue" },
+            };
+            Console.WriteLine("Ascending KW list: ");
+            var KWlist = (from element in car
+                         orderby element.KW ascending
+                         select element).ToList();
+            foreach (var item in KWlist)
+            {
+                Console.WriteLine(item.Model + ": " + item.KW);
+            }
+            Console.WriteLine("\nProducers that have an \"o\" in them");
+            var oList = car.Where(x => x.Producer.Contains("o")).ToList();
+            foreach (var item in oList)
+            {
+                Console.WriteLine(item.Producer);
+            }
+            Console.WriteLine("\nProducers that have an \"e\" in them");
+            var eList = car.Where(x => x.Producer.Contains("e")).ToList();
+            foreach (var item in eList)
+            {
+                Console.WriteLine(item.Producer);
+            }
+            Console.WriteLine("\nCars that have a model name that is longer than 4 characters: ");
+            var moreThanFour = car.Where(x => x.Model.Length > 4).ToList();
+            foreach (var item in moreThanFour)
+            {
+                Console.WriteLine(item.Producer + ": " + item.Model);
+            }
+            var minKW = car.Min(x => x.KW);
+            var maxKW = car.Max(x => x.KW);
+            Console.WriteLine("\nCar with the lowest KW: " + minKW + "\nCar with largest KW: " + maxKW);
+
+
+            #endregion Ülesanne
 
 
             Console.ReadLine();
