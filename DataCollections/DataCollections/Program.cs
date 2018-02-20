@@ -320,19 +320,43 @@ namespace DataCollections
             //    Console.WriteLine(item.Name + " " + item.Age);
             //}
 
-            var a = numbers.Contains(7);
+            //CONTAINS
 
-            bool b = false;
-            foreach (var item in numbers)
-            {
-                if (item == 6)
-                    b = true;
-            }
+            //var a = numbers.Contains(7);
+
+            //bool b = false;
+            //foreach (var item in numbers)
+            //{
+            //    if (item == 6)
+            //        b = true;
+            //}
+
+            //Console.WriteLine(a);
+            //Console.WriteLine(b);
+
+            var a = numbers.ElementAtOrDefault(7);
+            var b = numbers.FirstOrDefault();
+            var c = numbers.Take(3).ToList();
+            var d = numbers.Average();
+            var e = numbers.Max();
+            var f = numbers.Min();
 
             Console.WriteLine(a);
             Console.WriteLine(b);
 
-                        #endregion LINQ
+            Console.WriteLine("***");
+
+            foreach (var item in c)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine(d);
+            Console.WriteLine(e);
+
+
+            var g = humans1.Where(x => x.Name == "Kalle");
+
+            #endregion LINQ
 
 
 
