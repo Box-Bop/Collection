@@ -287,19 +287,53 @@ namespace DataCollections
             //Data
             int[] numbers = new int[7] { 0, 1, 2, 3, 4, 5, 6 };
 
-            //Loome päringu
-            var evenNumQuery = (from num in numbers
-                           where (num % 2) == 0
-                           select num).ToList();
+            ////Loome päringu
+            //var evenNumQuery = (from num in numbers
+            //               where (num % 2) == 0
+            //               select num).ToList();
 
             //foreach (int num in numQuery)
             //{
             //    Console.WriteLine("{0,1 }", num);
             //}
 
-            int evenNumCount = evenNumQuery.Count();
+            //int evenNumCount = evenNumQuery.Count();
 
-            #endregion LINQ
+
+            var humans1 = new List<Human>
+            {
+                new Human(){Name = "Kalle", Age = 40 },
+                new Human(){Name = "Malle", Age = 25 },
+                new Human(){Name = "Mari", Age = 30 },
+                new Human(){Name = "Elmar", Age = 10 },
+                new Human(){Name = "Juku", Age = 80 },
+            };
+
+            ////Küsime inimesi kelle vanus on üle 20
+            //var query = (from element in humans1
+            //             orderby element.Age ascending
+            //            where element.Age > 20
+            //            select element).ToList();
+
+            //foreach (var item in query)
+            //{
+            //    Console.WriteLine(item.Name + " " + item.Age);
+            //}
+
+            var a = numbers.Contains(7);
+
+            bool b = false;
+            foreach (var item in numbers)
+            {
+                if (item == 6)
+                    b = true;
+            }
+
+            Console.WriteLine(a);
+            Console.WriteLine(b);
+
+                        #endregion LINQ
+
 
 
             Console.ReadLine();
