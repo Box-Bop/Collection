@@ -5,3 +5,10 @@ C:\Users\opilane\Desktop\Blank\DataCollections\DataCollections\obj\Debug\DataCol
 C:\Users\opilane\Desktop\Blank\DataCollections\DataCollections\obj\Debug\DataCollections.csproj.CoreCompileInputs.cache
 C:\Users\opilane\Desktop\Blank\DataCollections\DataCollections\obj\Debug\DataCollections.exe
 C:\Users\opilane\Desktop\Blank\DataCollections\DataCollections\obj\Debug\DataCollections.pdb
+C:\Users\BocBop\Desktop\C# Lists and collections\Collection\DataCollections\DataCollections\bin\Debug\DataCollections.exe.config
+C:\Users\BocBop\Desktop\C# Lists and collections\Collection\DataCollections\DataCollections\bin\Debug\DataCollections.exe
+C:\Users\BocBop\Desktop\C# Lists and collections\Collection\DataCollections\DataCollections\bin\Debug\DataCollections.pdb
+C:\Users\BocBop\Desktop\C# Lists and collections\Collection\DataCollections\DataCollections\obj\Debug\DataCollections.csprojResolveAssemblyReference.cache
+C:\Users\BocBop\Desktop\C# Lists and collections\Collection\DataCollections\DataCollections\obj\Debug\DataCollections.csproj.CoreCompileInputs.cache
+C:\Users\BocBop\Desktop\C# Lists and collections\Collection\DataCollections\DataCollections\obj\Debug\DataCollections.exe
+C:\Users\BocBop\Desktop\C# Lists and collections\Collection\DataCollections\DataCollections\obj\Debug\DataCollections.pdb

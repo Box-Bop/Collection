@@ -419,9 +419,10 @@ namespace DataCollections
             {
                 Console.WriteLine(item.Producer + ": " + item.Model);
             }
-            var minKW = car.Min(x => x.KW);
-            var maxKW = car.Max(x => x.KW);
-            Console.WriteLine("\nCar with the lowest KW: " + minKW + "\nCar with largest KW: " + maxKW);
+            var minKW = car.Min(x => x.KW + " KW: " + x.Model);
+            var maxKW = car.Max(x => x.KW + " KW: " + x.Model);
+
+            Console.WriteLine("\nCar with the lowest KW: \n" + minKW + "\n\nCar with highest KW: \n" + maxKW);
 
 
             #endregion Ülesanne
